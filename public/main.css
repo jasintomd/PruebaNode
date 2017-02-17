@@ -1,0 +1,29 @@
+html, body{
+    height: 100%;
+    font-family: cursive;
+}
+li{
+    text-align: center;
+    list-style: none;
+    border:solid 1px aquamarine;
+    border-radius: 5px;
+    height: auto;
+    background-color: lightseagreen;
+    width:inherit;
+    max-width: 40%;
+    padding: 1%;
+    margin-top: 1%;
+    
+}
+.container{
+    height: 90%;
+    border: solid;
+}
+.mensajes{
+    height: 80%;
+    
+}
+.escribir{
+    text-align: center;
+    height: 20%;
+}
