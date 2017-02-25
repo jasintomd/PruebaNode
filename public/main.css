@@ -1,29 +1,275 @@
 html, body{
     height: 100%;
-    font-family: cursive;
+    font-family: "arial";
+    overflow: hidden;
+    background-image: url("images/fondo.png");
+    
+    
+    background-repeat: no-repeat;
+    background-color: #dfdfdf;
 }
-li{
-    text-align: center;
+
+.listo{
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06),0 2px 5px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+#todo{
+    width: 80%;
+    height: 95%;
+    margin-left: 10%;
+    margin-top: 1%;
+    padding: 0px;
+    
+}
+#misDatos{
+    width: 40%;
+    height: 100%;
+}
+#superior{    
+    border-right: solid 1px grey;
+    width: 50%;
+}
+#miAvatar{
+    height: 6em;
+    border-radius: 3em;
+    padding: 1%;
+}
+#miSala{
+    float: right;
+    
+    width: 40%;
+}
+#salaActual{
+    font-size: 200%;
+}
+
+#cabecera{
+    width: 100%;
+    height: 10%;
+}
+#cabecera.listo{  
+    
+    background-color: #EEEEEE;
+}
+
+h1{
+    display: inline-block;
+    margin-right: 5%;
+}
+#condiciones{
+    position:absolute;
+    text-align: left;
+    color:red;
     list-style: none;
-    border:solid 1px aquamarine;
+    margin-left: 11%;
+}
+.login{
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06),0 2px 5px 0 rgba(0,0,0,0.2);
+    background-color:white;
+    width: 50%;
+    
+    height: 70%;
+    margin-left: 25%;
+    text-align: center;
+    padding-top: 7%;
+}
+.login img{
+    
+    height: 4em;
+    border-radius: 2.5em;
+}
+#imgSeleccionada{
+    margin-top: 8%; 
+    margin-bottom: 2%;
+}
+#btnLogin{
+    width: 40%;
+    height: 3em;
+    margin-top:11%;
+}
+#nickUsuario{
+    margin-right: 5%
+}
+.contieneImagenes{
+    position: absolute;
+    margin-left:15%;
+    margin-top:1%;
+}
+
+.mensajes ul li{
+    display: block;
+    list-style: none;
     border-radius: 5px;
     height: auto;
-    background-color: lightseagreen;
-    width:inherit;
+    background-color: white;
+    width: auto;
     max-width: 40%;
     padding: 1%;
     margin-top: 1%;
     
 }
-.container{
-    height: 90%;
-    border: solid;
-}
-.mensajes{
-    height: 80%;
+.mensajes ul li.miMensaje{
+    margin-left: 50%;
+    background-color: #DCF8C6;
     
 }
-.escribir{
-    text-align: center;
-    height: 20%;
+.container{
+    float: left;
+    height: 86%;
+    width: 70%;
+    padding: 0;
 }
+.mensajes{
+    overflow-y: scroll;
+    height: 90%;
+    width: 100%;
+    background-image: url(images/fondo.jpg);
+    background-attachment: fixed;
+    
+}
+.imgBocadillo{
+    float: left;
+    height: 30px;
+    margin-left: -2.9%;
+    margin-top: 0.9%
+}
+.imgMiBocadillo{
+    float: right;
+    height: 30px;
+    margin-right:-10%;
+}
+#chat, #chat *{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    vertical-align:top;
+}
+.escribir{
+    height: 10%;
+    width: 100%;
+    background-color: #EEEEEE;
+
+}
+#sitioQueEscribe{
+    border-radius: 3px;
+    border: none ;
+    margin-left: 2.5%;
+    margin-top: 1%;
+    width: 95%;
+    height: 70%;
+    padding: 0;
+    
+}
+#enviar{
+    height: 100%;
+    width: 8%;
+}
+.escondido{
+    display: none;
+}
+
+#barraUsuarios{
+    float: left;
+    width: 20%;
+    height: 86%;
+    overflow-y: scroll;
+}
+.panel{
+    margin-bottom: 0px;
+}
+.panel-body{
+    padding: 0;
+}
+#barraUsuarios .panel-heading{
+    position: fixed;
+    width: 16%;
+}
+#barraRooms{ 
+   float: right;
+    width: 10%;
+    height: 86%;
+}
+
+#listaSalas li{
+    width: 100%;
+    height: 2.5em;
+    list-style: none;
+    border: solid 1px grey;
+    margin:0px;
+    margin-top:1%;
+    padding:0px;
+}
+#listaUsuarios li{
+    width: 100%;
+    height: 4em;
+    list-style: none;
+    margin:0px;
+    font-weight: bold;
+    margin-top:1%;
+    padding:0px;
+    font-size:110%;
+}
+#listaUsuarios li:hover{
+    background-color: #E9EBEB;
+}
+
+#listaUsuarios li span{
+    font-size:100%;
+    font-weight: normal;
+    
+}
+#listaUsuarios{
+    margin:0px; 
+    padding:0px;
+    padding-top: 20%;
+}
+#listaUsuarios img{
+    margin-top:3%;
+    margin-right: 6%;
+    margin-left: 3%;
+    height: 2em;
+    float: left;
+}
+#listaUsuarios img#escribiendo{
+    
+    position: absolute;
+    margin: 0%;
+    margin-top:0.5em;
+    margin-left:5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

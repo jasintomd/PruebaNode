@@ -12,19 +12,66 @@
         <title>Chat Node</title>
     </head>
     <body>
-    <h1>Bienvenido al mejor chat del mundo</h1>
-        <div class="container">
+        <div id="todo">
+        <div id="cabecera" class="escondido">
+            <div id="misDatos">
+            <img src="images/avatar.png" id="miAvatar">
+            <h1 id="superior"></h1>
+        
+                <span id="salaActual"></span>
+            </div>
+        </div>
+        <div class="login">
+            <label for="nombre">Nombre de usuario:</label>
+            <input name="nombre" id="nickUsuario">
+            
+            <label for="estado">Estado:</label>
+            <input name="estado" id="estadoUsuario"><br/>
+            <ul id="condiciones" class="escondido">
+                <li>Espacios en blanco prohibidos</li>
+                <li>De 1 a 16 caracteres</li>
+                
+            </ul>
+            <img id="imgSeleccionada" src="images/avatar.png"><br/>
+            <button id="selImg">Selecciona imagen de perfil</button>
+            <div class="contieneImagenes escondido">
+                <img class="imgPerfil" src="images/bien.jpg">
+                <img class="imgPerfil" src="images/gafas.jpg">
+                <img class="imgPerfil" src="images/guino.jpg">
+                <img class="imgPerfil" src="images/caca.jpg">
+            </div><br/>
+            <button id="btnLogin">Entrar al chat</button>
+        </div>
+        
+        <div id="barraUsuarios" class="panel panel-default escondido">
+            <div class="panel-heading">Usuarios conectados: <label id="numUsuarios"></label></div>
+            <div class="panel-body">
+                <ul id="listaUsuarios"></ul>
+            </div>
+        </div>
+        <div class="container escondido">
             <div class="mensajes">
-                <ul id="listaMensajes">
-                    
-                </ul>
+                <ul class="activo" id="listaMensajesPrincipal"></ul>
+                <ul class="escondido" id="listaMensajesAmérica">AMERICA</ul>
+                <ul class="escondido" id="listaMensajesÁfrica">AFRICA</ul>
+                <ul class="escondido" id="listaMensajesAsia">ASIA</ul>
             </div>
             <div class="escribir">
                 <form id="chat">
-                    <input id="sitioQueEscribe" type="text"><input type="submit" name="Enviar">
+                    <input id="sitioQueEscribe" placeholder="Escriba su mensaje aquí..."></input>
                 </form>
+
+            </div>
+            
+        </div>
+        <div id="barraRooms" class="panel panel-default escondido">
+            <div class="panel-heading">Salas disponibles:</div>
+            <div class="panel-body">
+                <ul id="listaSalas"></ul>
             </div>
         </div>
+        </div>
+
     </body>
     
 </html>
