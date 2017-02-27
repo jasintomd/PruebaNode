@@ -8,7 +8,11 @@ var listaRooms = ["Principal", "América", "África", "Asia"]
 
 app.use(express.static("public"));
 
+<<<<<<< HEAD
 http.listen( process.env.PORT || 3128, function(){
+=======
+http.listen(process.env.PORT || 3000, function(){
+>>>>>>> ce8df0f4ede36e4bc6825eaf8c55de111afe0b70
     console.log("Está escuchando en el puerto que tiene que escuchar")
 })
 
@@ -53,6 +57,7 @@ io.on("connection", function(socket){
         io.emit("nuevoMensaje", socket.nick +": "+ mensaje, lista);
 
     })
+<<<<<<< HEAD
     
     socket.on("escribiendo", function(nickUsuario){
         io.emit("escribiendo", nickUsuario)
@@ -81,4 +86,6 @@ io.on("connection", function(socket){
         io.emit("nuevoMensaje", socket.nick + " se ha desconectado")
 });
     
+=======
+>>>>>>> ce8df0f4ede36e4bc6825eaf8c55de111afe0b70
 })
