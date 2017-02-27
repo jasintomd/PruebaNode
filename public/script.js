@@ -11,7 +11,9 @@
     function cambiaListas(destino){
         $("#salaActual").html(destino);
         $(".mensajes ul.activo").addClass("escondido").removeClass("activo");
-        $("#listaMensajes"+destino).addClass("activo").removeClass("escondido")
+        $("#listaMensajes"+destino).addClass("activo").removeClass("escondido");
+        $("#etiqueta"+destino).html(0);
+        $("#etiqueta"+destino).hide();
     }
     function validaNick(nick){
         var reg = /\s/g;
@@ -113,14 +115,21 @@ $(document).ready(function(){
             }
         } 
     })
-    
+    function actualizaEtiquetas(lista){
+        var etiqueta = $("#etiqueta"+lista);
+        if($("#salaActual").html() != lista || parseInt(etiqueta.html()) > 0 ){
+            etiqueta.show();
+            var masUno = parseInt(etiqueta.html())+1;
+            etiqueta.html(masUno);
+        }
+    }
    socket.on("cargaRooms", function(listaRooms){
         $("#listaSalas").html("");
         var l = listaRooms.concat(listaSalasCliente);
         for(let i=0; i<l.length; i++){
             $("#listaSalas").append($("<li class='sala'>").text(l[i]).click(function(){
                cambiaListas(this.innerHTML)
-            }))
+            })).append($("<span id='etiqueta"+l[i]+"' class='badge escondido'>0</span>"))
        }
    })
     
@@ -151,6 +160,7 @@ $(document).ready(function(){
                 
                 $(sitio).append($("<img class='imgBocadillo' src='images/coma1.png'>"));
                 $(sitio).append($("<li>").text(mensaje));
+                actualizaEtiquetas(lista);
             }       
         }
     });
