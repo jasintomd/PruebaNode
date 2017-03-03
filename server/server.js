@@ -55,7 +55,7 @@ io.on("connection", function(socket){
         io.emit("nuevoMensaje", socket.nick +": "+ mensaje, lista);
 
     })
-<<<<<<< HEAD
+
     
     socket.on("escribiendo", function(nickUsuario){
         io.emit("escribiendo", nickUsuario)
